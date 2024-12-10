@@ -167,10 +167,6 @@ def health_check():
 def read_root():
     return {"message": "Welcome to FastAPI application!", "environment": ENVIRONMENT}
 
-# Favicon (необязательно)
-@app.get("/favicon.ico", include_in_schema=False)
-def favicon():
-    return FileResponse("favicon.ico")
 
 # Эндпоинт для поиска статей
 @app.get("/search")
